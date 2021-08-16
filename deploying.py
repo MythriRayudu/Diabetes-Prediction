@@ -21,13 +21,11 @@ loaded_model = {} # scores is an empty dict already
  
 if os.path.getsize('diabeties_prediction (3).pkl') > 0:      
    with open('diabeties_prediction (3).pkl',"rb") as f:    
-         unpickler = pickle.Unpickler(f)
-       #if file is not empty scores will be equal
-        # to the value unpickled
-        loaded_model = unpickler.load()
+      unpickler = pickle.Unpickler(f)
+      loaded_model = unpickler.load()
 # 
 # # Creating a sidebar for getting input parameters
- st.sidebar.header('User Input Parameters')
+st.sidebar.header('User Input Parameters')
 # 
 # # function for creating slide bar for input
 def user_input_style():
@@ -41,22 +39,22 @@ def user_input_style():
      return style
  
 # # Creating Variable for storing the fuction value
- df = user_input_style()
+df = user_input_style()
  
 #  Creating markdown and adding data frame input
 st.subheader('User Input Parameters')
- st.write(df)
+st.write(df)
  
 # 
 # # Making Prediction and its probability
- prediction = loaded_model.predict(df)
- prediction_proba = loaded_model.predict_proba(df)
+prediction = loaded_model.predict(df)
+prediction_proba = loaded_model.predict_proba(df)
 # 
 st.subheader('Prediction')
- if prediction[0]==0:
-     st.write("Patient is not diabetic")
- else:
-     st.write("Patient is diabetic")
+if prediction[0]==0:
+   st.write("Patient is not diabetic")
+else:
+   st.write("Patient is diabetic")
 st.write(prediction)
 # 
 st.subheader('Prediction Probability')
