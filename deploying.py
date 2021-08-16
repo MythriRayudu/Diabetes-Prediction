@@ -14,13 +14,13 @@ Diabetes Prediction App
 
 This app predicts diabetes:
 """)
-loaded_model=open('diabeties_prediction.pkl','rb')
+loaded_model=open('diabeties_prediction (3).pkl','rb')
 loaded_model=pickle.load(loaded_model)
 import os
 loaded_model = {} # scores is an empty dict already
  
-if os.path.getsize('diabeties_prediction.pkl') > 0:      
-   with open('diabeties_prediction.pkl',"rb") as f:    
+if os.path.getsize('diabeties_prediction (3).pkl') > 0:      
+   with open('diabeties_prediction (3).pkl',"rb") as f:    
          unpickler = pickle.Unpickler(f)
        #if file is not empty scores will be equal
         # to the value unpickled
