@@ -8,7 +8,7 @@ import numpy as np
 import pickle
 import streamlit as st
 import pandas as pd
-Creaing Heading and small description
+#Creaing Heading and small description
 st.write("""
 Diabetes Prediction App
 
