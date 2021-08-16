@@ -16,7 +16,7 @@ drive.mount('/content/drive')
 
 import streamlit as st
 
-# Commented out IPython magic to ensure Python compatibility.
+#Commented out IPython magic to ensure Python compatibility.
 # %%writefile Diabetes.py
 # # Importing libraries
 # import numpy as np
